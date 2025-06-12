@@ -7,7 +7,7 @@ import 'package:get_it/get_it.dart';
 /// This class is responsible for initializing the objects and register them into the GetIt instance.
 ///
 /// Every subclasses register their own transformers, repositories and services.
-class Provider {
+abstract class Provider {
   final getIt = GetIt.instance;
 
   Provider() {

@@ -22,6 +22,7 @@ class ExampleRepositoryImpl implements ExampleRepository {
     _exampleTransformer = exampleTransformer ?? _getIt.get<ExampleTransformer>();
   }
 
+  @override
   Future<Example> fetchExampleData() async {
     final Map<String, dynamic> data = await _exampleService.fetchExampleData();
     return _exampleTransformer.fromJson(data);
